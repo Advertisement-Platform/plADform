@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MyRESTService.Models" />
+  <xs:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="JsonResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="AdvertisementCollection" nillable="true" type="q1:ArrayOfAdvertisement" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="CatagoryCollection" nillable="true" type="q2:ArrayOfCatagory" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="ClientCollection" nillable="true" type="q3:ArrayOfClient" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="Exception" nillable="true" type="q4:Exception" />
+      <xs:element minOccurs="0" name="IsSuccessFull" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="PersonCollection" nillable="true" type="q5:ArrayOfPerson" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="VehicleCollection" nillable="true" type="q6:ArrayOfVehicle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JsonResponse" nillable="true" type="tns:JsonResponse" />
+</xs:schema>

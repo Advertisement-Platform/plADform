@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="73f38dcc-d2c5-40f0-a90c-9b9541c73151" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hometesting.azurewebsites.net/RestService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RestService.wsdl" MetadataType="Wsdl" ID="5162d6a4-e4c6-4edb-ae0c-11ba88b7354f" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?wsdl" />
+    <MetadataFile FileName="RestService.xsd" MetadataType="Schema" ID="3893ba85-5fca-48e1-a12b-49928993d347" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RestService1.xsd" MetadataType="Schema" ID="891afc79-0473-4913-94be-3afdafe4c3ec" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RestService2.xsd" MetadataType="Schema" ID="a29b3657-3ed0-4d99-9713-8a1996589c48" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RestService.disco" MetadataType="Disco" ID="b3bc26ad-48d0-4c20-bbcf-eb691fbb114d" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?disco" />
+    <MetadataFile FileName="RestService3.xsd" MetadataType="Schema" ID="984ed5d8-d70b-4ea5-9f1c-f63e83c0e1b9" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RestService4.xsd" MetadataType="Schema" ID="b7b78353-d2ee-4c01-97b9-12b87be78222" SourceId="1" SourceUrl="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
