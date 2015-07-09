@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RestService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IRestService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" />
+      <xsd:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MyRESTService.Models" />
+      <xsd:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRestService_ViewAllPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllPersons" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPerson" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllAdvertisements_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllAdvertisements" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllAdvertisements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllAdvertisementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddAdvertisement_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdvertisement" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddAdvertisement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdvertisementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllClients" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClient" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllCatagories_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllCatagories" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_ViewAllCatagories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllCatagoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddCatagory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatagory" />
+  </wsdl:message>
+  <wsdl:message name="IRestService_AddCatagory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCatagoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRestService">
+    <wsdl:operation name="ViewAllPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePerson/ViewAllPersons" message="tns:IRestService_ViewAllPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePerson/ViewAllPersonsResponse" message="tns:IRestService_ViewAllPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePerson/AddPerson" message="tns:IRestService_AddPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePerson/AddPersonResponse" message="tns:IRestService_AddPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllAdvertisements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdvertisement/ViewAllAdvertisements" message="tns:IRestService_ViewAllAdvertisements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdvertisement/ViewAllAdvertisementsResponse" message="tns:IRestService_ViewAllAdvertisements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdvertisement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdvertisement/AddAdvertisement" message="tns:IRestService_AddAdvertisement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdvertisement/AddAdvertisementResponse" message="tns:IRestService_AddAdvertisement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceClient/ViewAllClients" message="tns:IRestService_ViewAllClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceClient/ViewAllClientsResponse" message="tns:IRestService_ViewAllClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceClient/AddClient" message="tns:IRestService_AddClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceClient/AddClientResponse" message="tns:IRestService_AddClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllCatagories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCatagory/ViewAllCatagories" message="tns:IRestService_ViewAllCatagories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCatagory/ViewAllCatagoriesResponse" message="tns:IRestService_ViewAllCatagories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCatagory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCatagory/AddCatagory" message="tns:IRestService_AddCatagory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCatagory/AddCatagoryResponse" message="tns:IRestService_AddCatagory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IRestService" type="tns:IRestService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IRestService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ViewAllPersons">
+      <soap12:operation soapAction="http://tempuri.org/IServicePerson/ViewAllPersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPerson">
+      <soap12:operation soapAction="http://tempuri.org/IServicePerson/AddPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllAdvertisements">
+      <soap12:operation soapAction="http://tempuri.org/IServiceAdvertisement/ViewAllAdvertisements" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdvertisement">
+      <soap12:operation soapAction="http://tempuri.org/IServiceAdvertisement/AddAdvertisement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllClients">
+      <soap12:operation soapAction="http://tempuri.org/IServiceClient/ViewAllClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClient">
+      <soap12:operation soapAction="http://tempuri.org/IServiceClient/AddClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllCatagories">
+      <soap12:operation soapAction="http://tempuri.org/IServiceCatagory/ViewAllCatagories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCatagory">
+      <soap12:operation soapAction="http://tempuri.org/IServiceCatagory/AddCatagory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RestService">
+    <wsdl:port name="WSHttpBinding_IRestService" binding="tns:WSHttpBinding_IRestService">
+      <soap12:address location="http://hometesting.azurewebsites.net/RestService.svc/RestService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://hometesting.azurewebsites.net/RestService.svc/RestService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MyRESTService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MyRESTService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAdvertisement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Advertisement" nillable="true" type="tns:Advertisement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdvertisement" nillable="true" type="tns:ArrayOfAdvertisement" />
+  <xs:complexType name="Advertisement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Advertisement" nillable="true" type="tns:Advertisement" />
+  <xs:complexType name="ArrayOfCatagory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Catagory" nillable="true" type="tns:Catagory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCatagory" nillable="true" type="tns:ArrayOfCatagory" />
+  <xs:complexType name="Catagory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CatagoryName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Catagory" nillable="true" type="tns:Catagory" />
+  <xs:complexType name="ModelBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelBase" nillable="true" type="tns:ModelBase" />
+  <xs:complexType name="ArrayOfClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Client" nillable="true" type="tns:Client" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClient" nillable="true" type="tns:ArrayOfClient" />
+  <xs:complexType name="Client">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PackageName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+  <xs:complexType name="ArrayOfPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerson" nillable="true" type="tns:ArrayOfPerson" />
+  <xs:complexType name="Person">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanSendNotification" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CellNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vehicle" nillable="true" type="tns:Vehicle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicle" nillable="true" type="tns:ArrayOfVehicle" />
+  <xs:complexType name="Vehicle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Catagory">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Make" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:double" />
+          <xs:element minOccurs="0" name="VehicleType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Vehicle" nillable="true" type="tns:Vehicle" />
+</xs:schema>

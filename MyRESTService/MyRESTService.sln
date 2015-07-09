@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRESTService", "MyRESTService\MyRESTService.csproj", "{E493AA76-4FCA-4720-9B9E-E99F34FE5D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneFinder", "PhoneFinder\PhoneFinder.csproj", "{CF7422C4-B515-4FFE-9D0A-EE2C7B704185}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66} = {E493AA76-4FCA-4720-9B9E-E99F34FE5D66}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceHost", "WindowsServiceHost\WindowsServiceHost.csproj", "{F9DBBB7D-0183-4DB8-87E9-F0C9E91C3D7F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupMyWinService", "SetupMyWinService\SetupMyWinService.vdproj", "{5904DBE9-DD2D-445E-98E2-13338E1231FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRestUnitTests", "MyRestUnitTests\MyRestUnitTests.csproj", "{CBCD8086-B41F-433E-A64F-0BDDF1A666EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66} = {E493AA76-4FCA-4720-9B9E-E99F34FE5D66}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E493AA76-4FCA-4720-9B9E-E99F34FE5D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7422C4-B515-4FFE-9D0A-EE2C7B704185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7422C4-B515-4FFE-9D0A-EE2C7B704185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7422C4-B515-4FFE-9D0A-EE2C7B704185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7422C4-B515-4FFE-9D0A-EE2C7B704185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9DBBB7D-0183-4DB8-87E9-F0C9E91C3D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9DBBB7D-0183-4DB8-87E9-F0C9E91C3D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9DBBB7D-0183-4DB8-87E9-F0C9E91C3D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9DBBB7D-0183-4DB8-87E9-F0C9E91C3D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5904DBE9-DD2D-445E-98E2-13338E1231FF}.Debug|Any CPU.ActiveCfg = Debug
+		{5904DBE9-DD2D-445E-98E2-13338E1231FF}.Release|Any CPU.ActiveCfg = Release
+		{CBCD8086-B41F-433E-A64F-0BDDF1A666EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCD8086-B41F-433E-A64F-0BDDF1A666EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCD8086-B41F-433E-A64F-0BDDF1A666EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCD8086-B41F-433E-A64F-0BDDF1A666EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

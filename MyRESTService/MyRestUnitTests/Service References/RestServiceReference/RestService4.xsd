@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" />
+  <xs:import schemaLocation="http://hometesting.azurewebsites.net/RestService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MyRESTService.Models" />
+  <xs:element name="ViewAllPersons">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllPersonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="ViewAllPersonsResult" nillable="true" type="q1:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="person" nillable="true" type="q2:Person" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPersonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="AddPersonResult" nillable="true" type="q3:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllAdvertisements">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllAdvertisementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="ViewAllAdvertisementsResult" nillable="true" type="q4:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdvertisement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="advertisement" nillable="true" type="q5:Advertisement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdvertisementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="AddAdvertisementResult" nillable="true" type="q6:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllClients">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllClientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="ViewAllClientsResult" nillable="true" type="q7:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="client" nillable="true" type="q8:Client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="AddClientResult" nillable="true" type="q9:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllCatagories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewAllCatagoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="ViewAllCatagoriesResult" nillable="true" type="q10:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCatagory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MyRESTService.Models" minOccurs="0" name="catagory" nillable="true" type="q11:Catagory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCatagoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MyRESTService.Utils" minOccurs="0" name="AddCatagoryResult" nillable="true" type="q12:JsonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
